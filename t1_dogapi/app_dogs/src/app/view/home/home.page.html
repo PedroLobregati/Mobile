@@ -5,10 +5,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content style="--background: url('../../assets/dog_background.jpg');">
+<ion-content class="background">
   <ion-searchbar class="barraPesquisa"[(ngModel)] ="searchTerm" (ionChange)="search()"></ion-searchbar>  
 
-  <ion-list>
+  <ion-list class="bkg">
     <ion-item button *ngFor = "let breed of filteredBreeds" [routerLink]="['/', 'breed-details', breed.id]">
       <ion-avatar slot="start">
       </ion-avatar>

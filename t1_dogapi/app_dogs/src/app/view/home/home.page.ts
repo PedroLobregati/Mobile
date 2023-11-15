@@ -19,11 +19,16 @@ export class HomePage implements OnInit {
       this.filteredBreeds = data;
     });
   }
+
+  getIconName(name: string): string {
+    const firstLetter = name.charAt(0).toUpperCase();
+    return `ios-${firstLetter}`;
+  }
   
 
   search() {
     this.filteredBreeds = this.breeds.filter((breed) =>
-      breed.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+      breed.name.toLowerCase().includes(this.searchTerm.toLowerCase()),
     );
   }
 }

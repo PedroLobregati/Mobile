@@ -12,8 +12,10 @@
     <ion-card-content>
       <ion-card-title>{{ breed.name }}</ion-card-title>
       <img [src]="imageUrl" alt="{{ breed.name }}" class="breed-image">
-      <p class="temperament">Temperament: {{ breed.temperament }}</p>
+      <p class="temperament"><strong>Characteristics:</strong> {{ breed.temperament }}</p>
       <p class="description">{{ breed.description }}</p>
+      <p class="origin">{{ breed.origin }}</p>
+      <p class="life_span"> Life span: {{ breed.life_span}}</p>
     </ion-card-content>
   </ion-card>
 </ion-content>

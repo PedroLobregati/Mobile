@@ -1,11 +1,4 @@
-#container p {
-  font-size: 16px;
-  line-height: 22px;
 
-  color: #8c8c8c;
-
-  margin: 0;
-}
 
 #container a {
   text-decoration: none;
@@ -21,5 +14,21 @@ ion-toolbar {
 }
 
 ion-icon{
-  size: 60px;
+  stroke-width: 2%;
+}
+
+.background{
+  --background: url('/assets/dog_background.jpg');
+}
+
+ion-item {
+  --background: none;
+  opacity:1;
+  z-index: 1;
+}
+
+
+.bkg{
+  background: transparent;
+  z-index: 1;
 }
