@@ -5,20 +5,16 @@
 }
 
 h3{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: large;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: larger;
 }
 
-ion-toolbar {
-  height: 60px
-}
 
-ion-icon{
-  stroke-width: 2%;
-}
+
 
 .background{
-  --background: url('/assets/dog_background.jpg');
+  --background: url('/assets/dog_background_opaco.jpg');
 }
 
 ion-item {

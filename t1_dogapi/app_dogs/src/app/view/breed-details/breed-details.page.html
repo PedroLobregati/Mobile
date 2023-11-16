@@ -3,14 +3,14 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title>Detalhes da Raça</ion-title>
+    <ion-title>Breed Informations</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content *ngIf="breed" class="breed-details" style="--background: url('../../assets/dog_background.jpg');">
   <ion-card>
     <ion-card-content>
-      <ion-card-title>{{ breed.name }}</ion-card-title>
+      <ion-card-title style="font-family: cursive ;">{{ breed.name }}</ion-card-title>
       <img [src]="imageUrl" alt="{{ breed.name }}" class="breed-image">
       <p class="temperament"><strong>Characteristics:</strong> {{ breed.temperament }}</p>
       <p class="description">{{ breed.description }}</p>

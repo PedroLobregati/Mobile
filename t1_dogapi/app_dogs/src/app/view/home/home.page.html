@@ -1,12 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="secondary">
-    <ion-icon name="paw-outline" style="width:100px ;"></ion-icon>
-    <ion-title style="font-weight: lighter; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 22px;">Dog Breeds Searcher</ion-title>
+    <ion-icon name="paw-outline" style="font-size: 32px; margin-right: 8px;"></ion-icon>
+    <ion-title style="font-weight: bold; font-size: 18px; font-family: cursive;">Dog Breeds Searcher</ion-title>
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content class="background">
-  <ion-searchbar class="barraPesquisa"[(ngModel)] ="searchTerm" (ionChange)="search()"></ion-searchbar>  
+  <ion-searchbar class="barraPesquisa" [(ngModel)]="searchTerm" (ionChange)="search()" placeholder="Search for breeds" showCancelButton="focus" cancelButtonText="Cancel" animated="true" style="--placeholder-color: #000000; --placeholder-font-style: italic; --placeholder-font-weight: bold; ">
+    
+  </ion-searchbar>
+   
 
   <ion-list class="bkg">
     <ion-item button *ngFor = "let breed of filteredBreeds" [routerLink]="['/', 'breed-details', breed.id]">
