@@ -1,0 +1,43 @@
+<ion-item-group>
+  <ion-item lines="none">
+    <ion-label>
+      <h4>{{purchase?.name}}</h4>
+      <p>{{purchase?.city}}</p>
+      <ion-text>
+        <p>R$: {{purchase?.price}}
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </p>
+      </ion-text>
+    </ion-label>
+    <ion-note *ngIf="purchase?.delivered == true" slot="end" color="dark">
+      Entregue
+      <ion-icon name="checkmark-circle-outline" color="success"></ion-icon>
+    </ion-note>
+    <ion-note *ngIf="purchase?.delivered == false" slot="end" color="dark">
+      Não Entregue
+      <ion-icon name="close" color="danger"></ion-icon>
+    </ion-note>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <ion-text color="dark">
+        <p>{{getCuisine(purchase?.requests)}}</p>
+      </ion-text>
+      <p style="margin-top: 2%;">{{purchase?.data}}</p>
+      <ion-row>
+        <ion-col col="6">
+          <ion-button fill="outline" expand="block">
+            Pedir Novamente
+          </ion-button>
+        </ion-col>
+        <ion-col col="6">
+          <ion-button fill="outline" expand="block" color="dark">
+            Abrir reclamação
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-label>
+  </ion-item>
+
+</ion-item-group>
